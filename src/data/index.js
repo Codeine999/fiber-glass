@@ -2,8 +2,7 @@ import Profile from '../../public/assets/profile.jpg'
 import Crap from '../../public/assets/crap1.JPG'
 
 import Cru from '../../public/assets/cru.jpg'
-import Cru2 from '../../public/assets/cru1.jpg'
-import Cru3 from '../../public/assets/cru2.jpg'
+import Cru3 from '../../public/assets/cru2.JPG'
 import Cru4 from '../../public/assets/cru3.jpg'
 
 import Dolphine from '../../public/assets/dolphine.png'
@@ -17,8 +16,7 @@ import Pot from '../../public/assets/pot.png'
 import Water from '../../public/assets/water.jpg'
 
 
-import Album2 from '../../public/assets/Album2.jpg'
-import Album3 from '../../public/assets/Album3.jpg'
+
 
 
 import Album4 from  '../../public/assets/album2.png'

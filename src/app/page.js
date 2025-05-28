@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 
-
 import { Check } from "lucide-react";
 import Album from "@/app/album/Album";
 import { Topic, EndPoint } from "@/components/Components";

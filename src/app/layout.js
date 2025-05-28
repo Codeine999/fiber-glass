@@ -26,8 +26,6 @@ export const metadata = {
   },
   
   canonical: "http://www.petunda-fiberglass.com",
-  
-  themeColor: "#000000",
 };
 
 export default function RootLayout({ children }) {
