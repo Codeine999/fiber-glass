@@ -1,57 +1,101 @@
 import Profile from '../../public/assets/profile.jpg'
-import Album1 from '../../public/assets/Album1.jpg'
+import Crap from '../../public/assets/crap1.JPG'
+
+import Cru from '../../public/assets/cru.jpg'
+import Cru2 from '../../public/assets/cru1.jpg'
+import Cru3 from '../../public/assets/cru2.jpg'
+import Cru4 from '../../public/assets/cru3.jpg'
+
+import Dolphine from '../../public/assets/dolphine.png'
+
+import Bts from '../../public/assets/bts.png'
+import Logo from '../../public/assets/logo.png'
+import Logo2 from '../../public/assets/logo2.png'
+import Logo3 from '../../public/assets/logo3.png'
+import Pot from '../../public/assets/pot.png'
+
+import Water from '../../public/assets/water.jpg'
+
+
 import Album2 from '../../public/assets/Album2.jpg'
 import Album3 from '../../public/assets/Album3.jpg'
+
+
+import Album4 from  '../../public/assets/album2.png'
 
 export const album = [
   {
     id: "1",
     name: "งานไฟเบอร์กลาส",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
+    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: Album1
+    image: Crap,
+    
   },
   {
     id: "2",
     name: "Fiber Glass2",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
+    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollitLorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: Album2
+    image: Album4
   },
   {
     id: "3",
     name: "Fiber Glass3",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
+    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: Album3
+    image: Cru,
+    image2: Cru3,
+    image3: Cru4
   },
   {
     id: "4",
     name: "Fiber Glass4",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
+    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: Album3
+    image: Dolphine
   },
     {
     id: "5",
     name: "Fiber Glass5",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
+    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: Album3
+    image: Bts
   },
     {
     id: "6",
     name: "Fiber Glass6",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
+    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: Album3
+    image: Logo
   },
     {
     id: "7",
     name: "Fiber Glass7",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
+    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: Album3
+    image: Logo2
+  },
+  {
+    id: "8",
+    name: "Fiber Glass7",
+    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
+    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
+    image: Logo3
+  },
+    {
+    id: "9",
+    name: "Fiber Glass7",
+    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
+    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
+    image: Pot
+  },
+    {
+    id: "10",
+    name: "Fiber Glass7",
+    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
+    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
+    image: Water
   },
 ]
 

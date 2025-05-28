@@ -9,7 +9,7 @@ import Hero from "../../public/assets/header4.png"
 const Header = () => {
     return (
         <div 
-              className="-mt-15 w-full h-[585px] bg-cover bg-center relative object-cover"
+              className="-mt-15 w-full h-[620px] bg-cover bg-center relative object-cover"
                 style={{ backgroundImage: `url(${Hero.src})` }}
         >
               <div
@@ -35,7 +35,7 @@ const Header = () => {
                 </div>
 
                 <div className="flex md:justify-start justify-center">
-                    <h1 className="md:mt-4 mt-5 text-white shadow-2xl text-[16px] xl:w-[500px] md:w-[350px] 
+                    <h1 className="md:mt-4 mt-5 text-white text-[16px] xl:w-[500px] md:w-[350px] 
                      md:text-left text-center"
                     >
                         รับออกแบบและผลิตชิ้นงานไฟเบอร์กลาสและอลูมิเนียม

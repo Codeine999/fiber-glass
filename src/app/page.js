@@ -3,16 +3,17 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 import { Check } from "lucide-react";
-import Album from "@/components/Album";
+import Album from "@/app/album/Album";
 import { Topic, EndPoint } from "@/components/Components";
 import Faq from "@/components/Faq";
 import Blogs from "@/app/blogs/page"
+import Map from "@/components/Map";
 
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <div className="">
+
       <Header />
 
       <section id="service">
@@ -41,46 +42,47 @@ export default function Home() {
         <div className="md:mt-28 mt-18 xl:px-50 md:px-14 px-7 md:flex md:justify-between">
           <div>
             <Topic title="ทำไมถึงต้องเลือกเรา" />
-            <p className="lg:w-[380px] w-[320px] lg:text-[16px] text-[13px]">
-              Lorem elit enim laborum esse commodo anim proident anim deserunt
-              proident nostrud ad culpa
+            <p className="lg:w-[440px] w-[320px] lg:text-[16px] text-[13px]">
+              เราเป็นผู้เชี่ยวชาญงานไฟเบอร์กลาสและปติมกรรมกว่า 20 ปี แม้เพิ่งเริ่มออนไลน์แต่เรายังคงรักษาคุณภาพงานและบริการที่ไว้วางใจได้
             </p>
 
-            <div className="lg:mt-14 md:mt-9 mt-8">
+            <div className="md:mt-8 mt-8">
               <div className="flex gap-4">
-                <Check className="lg:mt-2 mt-4 text-green-600 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] " />
-                <h4 className="lg:text-[22px] text-[18px]">
-                  Lorem elit enim laborum esse
+                <Check className="mt-3 text-green-600 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] " />
+                <h4 className="-mx-2 lg:text-[22px] text-[18px]">
+                  ประสบการณ์มากกว่า 20 ปี
                 </h4>
               </div>
-              <p className="lg:px-14 px-12 md:-mt-3 -mt-4 lg:text-[14px] text-[12px]">
-                Lorem elit enim laborum esse commodo anim
+              <p className="md:px-12 px-10 -mt-3 md:w-[500px] w-[340px] lg:text-[14px] text-[12px]">
+                เราผ่านงานที่ท้าทายและหลากหลายรูปแบบ ทำให้เราเข้าใจและตอบโจทย์ความต้องการของลูกค้าได้อย่างลึกซึ้งและครบถ้วน
               </p>
             </div>
 
-            <div className="lg:mt-14 md:mt-9 mt-6">
+            <div className="md:mt-8 mt-8">
               <div className="flex gap-4">
-                <Check className="lg:mt-2 mt-4 text-green-600 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] " />
-                <h4 className="lg:text-[22px] text-[18px]">
-                  Lorem elit enim laborum esse
+                <Check className="mt-3 text-green-600 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] " />
+                <h4 className="-mx-2 lg:text-[22px] text-[18px]">
+                  ประสบการณ์มากกว่า 20 ปี
                 </h4>
               </div>
-              <p className="lg:px-14 px-12 md:-mt-3 -mt-4 lg:text-[14px] text-[12px]">
-                Lorem elit enim laborum esse commodo anim
+              <p className="md:px-12 px-10 -mt-3 md:w-[500px] w-[340px] lg:text-[14px] text-[12px]">
+                เราผ่านงานที่ท้าทายและหลากหลายรูปแบบ ทำให้เราเข้าใจและตอบโจทย์ความต้องการของลูกค้าได้อย่างลึกซึ้งและครบถ้วน
               </p>
             </div>
 
-            <div className="lg:mt-14 md:mt-9 mt-6">
+            <div className="md:mt-8 mt-8">
               <div className="flex gap-4">
-                <Check className="lg:mt-2 mt-4 text-green-600 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] " />
-                <h4 className="lg:text-[22px] text-[18px]">
-                  Lorem elit enim laborum esse
+                <Check className="mt-3 text-green-600 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] " />
+                <h4 className="-mx-2 lg:text-[22px] text-[18px]">
+                  ประสบการณ์มากกว่า 20 ปี
                 </h4>
               </div>
-              <p className="lg:px-14 px-12 md:-mt-3 -mt-4 lg:text-[14px] text-[12px]">
-                Lorem elit enim laborum esse commodo anim
+              <p className="md:px-12 px-10 -mt-3 md:w-[500px] w-[340px] lg:text-[14px] text-[12px]">
+                เราผ่านงานที่ท้าทายและหลากหลายรูปแบบ ทำให้เราเข้าใจและตอบโจทย์ความต้องการของลูกค้าได้อย่างลึกซึ้งและครบถ้วน
               </p>
             </div>
+
+          
           </div>
 
           <div className="md:mt-0 mt-12 bg-gray-800 lg:w-[400px] md:w-[340px] lg:h-[500px] h-[400px] rounded-2xl"></div>
@@ -100,37 +102,55 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="h-[380px] w-full bg-gray-100">
+      <div className="-mt-20">
+        <EndPoint/>
+      </div>
+
+      <div className="mt-10 h-[380px] w-full ">
         <div className="flex justify-center">
           <div className="mt-8 mb-5">
-            <Topic title="ลูกค้าของเรา" />
+            <Topic title="คำค้นหาสินค้า" />
           </div>
         </div>
         <div className="mt-4 flex justify-center">
           <div className="grid md:grid-cols-3 grid-cols-2 md:gap-15 gap-10 ">
-            <div className="w-[150px] h-[50px] bg-gray-300 rounded-lg">
-              
+            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+              <div className="text-center items-center mt-1.5 ">
+                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+              </div>
             </div>
-            <div className="w-[150px] h-[50px] bg-gray-300 rounded-lg">
-              
+            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+              <div className="text-center items-center mt-1.5 ">
+                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+              </div>
             </div>
-            <div className="w-[150px] h-[50px] bg-gray-300 rounded-lg">
-              
+            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+              <div className="text-center items-center mt-1.5 ">
+                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+              </div>
             </div>
-            <div className="w-[150px] h-[50px] bg-gray-300 rounded-lg">
-              
+            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+              <div className="text-center items-center mt-1.5 ">
+                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+              </div>
             </div>
-            <div className="w-[150px] h-[50px] bg-gray-300 rounded-lg">
-              
+            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+              <div className="text-center items-center mt-1.5 ">
+                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+              </div>
             </div>
-            <div className="w-[150px] h-[50px] bg-gray-300 rounded-lg">
-              
+            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+              <div className="text-center items-center mt-1.5 ">
+                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      
+      <div className="-mt-25">
+        <EndPoint />
+      </div>
       
 
       <section id="blogs">
@@ -140,25 +160,25 @@ export default function Home() {
             <p className="">ดูทั้งหมด</p>
           </div>
           <Blogs />
-
-
         </div>
       </section>
 
-      <EndPoint />
+      <div className="-mt-25">
+        <EndPoint />
+      </div>
       <Faq />
+      <Map />
 
       <section id="contact">
-        <div className="mt-18 w-full md:h-[470px] h-[400px] bg-[#1e3556]">
+        <div className="w-full h-[320px] bg-[#1e3556]">
           <div className="flex justify-center">
-            <h1 className="md:mt-17 mt-12 md:w-full w-[300px] text-white md:text-[25px] text-[20px] text-center">
+            <h1 className="mt-8 md:w-full w-[300px] text-white md:text-[25px] text-[20px] text-center">
               รับผลิตชิ้นงานเรซิ่และไฟเบอร์กลาส - PETUNDA FIBERGLASS
             </h1>
           </div>
           <div className="flex justify-center">
-            <h6 className="md:mt-12 mt-8 md:w-[650px] w-[350px] text-white md:text-[20px] text-center">
-              94/4 ซอยโสภมัย ถนนสาธุประดิษฐ์ แขวงบางโพพาง เขตยานนาวา
-              กรุงเทพมหานคร 10120 เวลาทำการ 8:30 - 18:00 น
+            <h6 className="mt-2 md:w-[650px] w-[350px] text-white md:text-[20px] text-center">
+              54/107 ต.เสาธงหิน อ.บางใหญ่ นนทบุรี 11140 เวลาทำการ 8:30 - 18:00 น
             </h6>
           </div>
 
@@ -166,9 +186,9 @@ export default function Home() {
           <p className="md:mt-15 mt-8 text-white text-center">
             อีเมล : Petunda911@gmail.com{" "}
           </p>
-          <p className="mt-2 text-white text-center">โทรศัพท์ : 0988323099 </p>
+          <p className="mt-2 text-white text-center">โทรศัพท์ : 0830391282 </p>
         </div>
       </section>
-    </>
+    </div>
   );
 }
