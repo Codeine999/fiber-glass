@@ -7,26 +7,11 @@ import Hamburger from 'hamburger-react'
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false)
-    const [scrolled, setScrolled] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   return (
   <div 
-    className={`sticky top-0 w-full h-[60px] z-50  transition-colors duration-300 ${
-    scrolled ? 'bg-gray-900 bg-opacity-95 shadow-md' : 'bg-transparent'
-    }`}
+    className={`sticky top-0 w-full h-[60px] z-50  transition-colors duration-300 `}
   >
   <div className="flex justify-between xl:px-28 md:p-4 md:px-10 px-5">
     <div className='md:mt-0 mt-4 md:px-0 px-2'>

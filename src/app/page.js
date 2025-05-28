@@ -1,13 +1,12 @@
 import Header from "@/components/Header";
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
+
 
 import { Check } from "lucide-react";
 import Album from "@/app/album/Album";
 import { Topic, EndPoint } from "@/components/Components";
 import Faq from "@/components/Faq";
 import Blogs from "@/app/blogs/page"
-import Map from "@/components/Map";
+import MapClientWrapper from "@/components/Mapclient";
 
 
 export default function Home() {
@@ -167,7 +166,7 @@ export default function Home() {
         <EndPoint />
       </div>
       <Faq />
-      <Map />
+      <MapClientWrapper />
 
       <section id="contact">
         <div className="w-full h-[320px] bg-[#1e3556]">
