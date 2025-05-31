@@ -7,5 +7,9 @@ const Map = dynamic(() => import('./Map'), {
 });
 
 export default function MapClientWrapper() {
-  return <Map />;
+  return (
+    <div className='px-10 pb-14'>
+      <Map />
+    </div>
+  );
 }

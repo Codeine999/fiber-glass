@@ -1,17 +1,24 @@
+"use client";
+import Image from "next/image";
 import Header from "@/components/Header";
+import Navbar from "@/components/Navbar"
 
+import Link from 'next/link';
 import { Check } from "lucide-react";
 import Album from "@/app/album/Album";
 import { Topic, EndPoint } from "@/components/Components";
 import Faq from "@/components/Faq";
-import Blogs from "@/app/blogs/page"
+import Blogs from "@/components/Blogs"
 import MapClientWrapper from "@/components/Mapclient";
+
+import Mark from "../../public/assets/mark.png"
 
 
 export default function Home() {
+  
   return (
     <div className="">
-
+      <Navbar />
       <Header />
 
       <section id="service">
@@ -104,42 +111,42 @@ export default function Home() {
         <EndPoint/>
       </div>
 
-      <div className="mt-10 h-[380px] w-full ">
+      <div className="mt-10 h-[380px] w-full">
         <div className="flex justify-center">
           <div className="mt-8 mb-5">
             <Topic title="คำค้นหาสินค้า" />
           </div>
         </div>
         <div className="mt-4 flex justify-center">
-          <div className="grid md:grid-cols-3 grid-cols-2 md:gap-15 gap-10 ">
-            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+          <div className="grid md:grid-cols-3 grid-cols-2 md:gap-15 gap-x-4 gap-y-8">
+            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
               <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+                <h2 className="text-blue-900 whitespace-nowrap">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
               </div>
             </div>
-            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
               <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+                <h2 className="text-blue-900">ผลิตโมเดลแม่พิมพ์</h2>
               </div>
             </div>
-            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
               <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+                <h2 className="text-blue-900">งานหน่วยงานราชการ</h2>
               </div>
             </div>
-            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
               <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+                <h2 className="text-blue-900">งานหล่อปูนซิเมนต์</h2>
               </div>
             </div>
-            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
               <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+                <h2 className="text-blue-900">งานโต๊ะ เก้าอี้ สระว่ายน้ำ</h2>
               </div>
             </div>
-            <div className="w-[200px] h-[40px] border-1 border-blue-900 rounded-4xl">
+            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
               <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+                <h2 className="text-blue-900">งานสถาปัตยกรรม</h2>
               </div>
             </div>
           </div>
@@ -152,10 +159,10 @@ export default function Home() {
       
 
       <section id="blogs">
-        <div className="mt-20 md:px-28 px-7">
+        <div className="mt-20 xl:px-40 md:px-14 px-7">
           <div className="flex justify-between items-center">
             <Topic title="บทความ" />
-            <p className="">ดูทั้งหมด</p>
+            <Link href="/blogs" className="cursor-pointer">ดูทั้งหมด</Link>
           </div>
           <Blogs />
         </div>
@@ -168,9 +175,14 @@ export default function Home() {
       <MapClientWrapper />
 
       <section id="contact">
-        <div className="w-full h-[320px] bg-[#1e3556]">
-          <div className="flex justify-center">
-            <h1 className="mt-8 md:w-full w-[300px] text-white md:text-[25px] text-[20px] text-center">
+        <div className="w-full h-[360px] bg-[#1e3556] relative">
+          <Image 
+                src={Mark}
+                alt="watermark"
+                className="absolute top-0 h-[360px] opacity-15 z-10 object-cover"
+            />
+          <div className="flex justify-center z-50">
+            <h1 className="mt-12 md:w-full w-[300px] text-white md:text-[25px] text-[20px] text-center">
               รับผลิตชิ้นงานเรซิ่และไฟเบอร์กลาส - PETUNDA FIBERGLASS
             </h1>
           </div>

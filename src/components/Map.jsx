@@ -20,10 +20,10 @@ const Map = () => {
 
   return (
     <>
-    <div className="mt-50 mb-10 text-center">
-      <p>แผนที่จาก Google Map</p>
+    <div className="mt-40 mb-10 text-center">
+      <p className="text-[18px]">แผนที่จาก Google Map</p>
     </div>
-    <MapContainer center={position} zoom={15} style={{ height: "420px", width: "100%" }}>
+    <MapContainer center={position} zoom={15} style={{ height: "280px", width: "100%" }}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

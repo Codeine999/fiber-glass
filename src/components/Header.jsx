@@ -1,6 +1,8 @@
 import React from "react";
+import Image from "next/image";
 import { Button } from "./ui/button";
 
+import Mark from "../../public/assets/mark.png"
 
 import Hero from "../../public/assets/header4.png"
 
@@ -19,6 +21,12 @@ const Header = () => {
                 }}
             />
             <div className="md:hidden block w-full h-[585px] bg-black opacity-30 absolute" />
+              {/* <Image 
+                    src={Mark}
+                    alt="watermark"
+                    className="absolute top-0 left-0 w-full opacity-10 pointer-events-none select-none"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                /> */}
             <div className="p-10 xl:px-28 relative">
                 <div className="flex md:justify-start justify-center">
                     <h2 className="text-white md:text-[35px] text-[28px] mt-24">

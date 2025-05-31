@@ -32,7 +32,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={kanit.className}>
-        <Navbar />
         {children}
         <Footer />
       </body>

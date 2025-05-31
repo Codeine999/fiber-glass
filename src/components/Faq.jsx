@@ -11,9 +11,9 @@ const Faq = () => {
   };
 
   return (
-    <div className="mt-25 lg:px-28 md:px-10 ">
+    <div className="mt-20 lg:px-28 md:px-10 ">
       <div className="md:flex md:justify-between md:text-left text-center">
-        <p className="mt-26 lg:px-18 md:px-6 md:text-[35px] text-[25px] font-bold text-gray-800">
+        <p className="lg:px-18 md:px-6 md:text-[35px] text-[25px] font-bold text-gray-800">
           คำถามที่พบบ่อย (FAQ)
         </p>
         <div className="md:mt-0 mt-8 md:space-y-6 space-y-4 md:px-0 px-6">
