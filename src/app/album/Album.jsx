@@ -64,12 +64,13 @@ export default function Slider() {
           <SwiperSlide key={index} className='px-4' >
 
             <div className='shadow-md md:w-full w-[340px] md:h-[440px] h-[460px] mb-50 rounded-sm'>
+              
               <Image
                 src={item.image}
                 alt={item.name}
                 className='w-full h-[320px] p-2 object-cover rounded-xl'
               />
-              <Link href={`/album/${item.id}`}>
+              
                 <div className='px-3'>
                   <h2 className='text-[20px]'>{item.name}</h2>
                   <p className='w-[260px] text-[13px]'>{cutText(item.detail, maxLength())}</p>
@@ -80,11 +81,12 @@ export default function Slider() {
                     <h1 className='text-[10px] text-[#0d1652]'>ผลิตโดยเพชรอันดาไฟเบอร์กลาส</h1>
                   </div>
 
-                  <Button className="-mt-1 w-16 h-6 text-[10px] bg-blue-900">
-                    ดูรายละเอียด
-                  </Button>
+                  <Link href={`/album/${item.id}`}>
+                    <Button className="-mt-1 w-16 h-6 text-[10px] bg-blue-900">
+                      ดูรายละเอียด
+                    </Button>
+                  </Link>
                 </div>
-              </Link>
             </div>
 
           </SwiperSlide>
