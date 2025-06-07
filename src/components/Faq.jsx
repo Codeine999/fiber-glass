@@ -11,19 +11,19 @@ const Faq = () => {
   };
 
   return (
-    <div className="mt-20 lg:px-28 md:px-10 ">
+    <div className="lg:px-28 md:px-10 ">
       <div className="md:flex md:justify-between md:text-left text-center">
-        <p className="lg:px-18 md:px-6 md:text-[35px] text-[25px] font-bold text-gray-800">
+        <p className="md:mt-32 mt-12 px-10 lg:text-[35px] md:text-[30px] text-[25px] font-bold text-gray-800">
           คำถามที่พบบ่อย (FAQ)
         </p>
-        <div className="md:mt-0 mt-8 md:space-y-6 space-y-4 md:px-0 px-6">
+        <div className="md:mt-14 mt-8 md:space-y-6 space-y-4 md:px-0 px-6">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-gray-300 pb-4 xl:w-[550px] lg:w-[440px] md:w-[380px] w-full">
+            <div key={index} className="border-b border-gray-300 pb-4 xl:w-[550px] lg:w-[420px] md:w-[380px] w-full">
               <div className="flex justify-between items-center">
                 <button
                   onClick={() => toggleAnswer(index)}
-                  className="w-full text-left md:text-[20px] text-[16px] text-gray-900 py-4 px-6 hover:bg-gray-100
-                 transform duration-300 focus:outline-none cursor-pointer"
+                  className="w-full text-left lg:text-[20px] md:text-[18px] text-[16px] text-gray-900 py-4 px-6 hover:bg-gray-100
+                  transform duration-300 focus:outline-none cursor-pointer"
                 >
                   {faq.question}
                 </button>

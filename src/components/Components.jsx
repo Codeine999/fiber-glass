@@ -1,7 +1,7 @@
 
 export const Topic = ({ title }) => {
     return(
-        <h5 className="lg:text-[30px] text-[25px]">{title}</h5>
+        <h5 className="md:text-[30px] text-[25px] text-black">{title}</h5>
     )
 }
 

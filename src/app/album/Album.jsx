@@ -1,17 +1,15 @@
-'use client'
-import React, { useState, useEffect, useRef } from 'react'
-import Image from 'next/image'
-import Link from 'next/link';
-import 'swiper/css';
-import 'swiper/css/pagination';
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import "swiper/css";
+import "swiper/css/pagination";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import { album } from '@/data';
-import { Button } from '../../components/ui/button';
-import { Tag } from 'lucide-react';
-
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import { album } from "@/data";
+import { Button } from "../../components/ui/button";
+import { Tag } from "lucide-react";
 
 export default function Slider() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -29,19 +27,18 @@ export default function Slider() {
 
   const maxLength = () =>
     windowWidth < 768
-      ? 120
+      ? 86
       : windowWidth < 1000
-        ? 86
-        : windowWidth <= 1100
-          ? 86
-          : 86;
+      ? 86
+      : windowWidth <= 1100
+      ? 86
+      : 86;
 
   const cutText = (text, maxLength) =>
     text.length <= maxLength ? text : text.slice(0, maxLength) + "..";
 
-
   return (
-    <div className='md:mt-20 mt-14  overflow-hidden'>
+    <div className="md:mt-14 mt-10 overflow-hidden">
       <Swiper
         modules={[Pagination]}
         grabCursor={true}
@@ -53,55 +50,51 @@ export default function Slider() {
         slideToClickedSlide={true}
         pagination={{ clickable: true }}
         breakpoints={{
-          0: { slidesPerView: 1, spaceBetween: 0 },
+          0: { slidesPerView: 1, spaceBetween: 10 },
           768: { slidesPerView: 2, spaceBetween: -5 },
           1024: { slidesPerView: 3, spaceBetween: -10 },
-          1400: { slidesPerView: 3, spaceBetween: 10 },
+          1400: { slidesPerView: 3, spaceBetween: 5 },
         }}
       >
         {album.map((item, index) => (
-
-          <SwiperSlide key={index} className='px-4' >
-
-            <div className='shadow-md md:w-full w-[340px] md:h-[440px] h-[460px] mb-50 rounded-sm'>
-              
+          <SwiperSlide key={index} className="md:px-4 px-2">
+            <div className="shadow-md w-full md:h-[440px] h-[450px] mb-50 rounded-sm">
               <Image
-                src={item.image}
+                src={item.image[0] || "/assets/bts.png" }
                 alt={item.name}
-                className='w-full h-[320px] p-2 object-cover rounded-xl'
+                width={500}
+                height={300}
+                className="w-full h-[320px] p-2 object-cover rounded-xl"
               />
-              
-                <div className='px-3'>
-                  <h2 className='text-[20px]'>{item.name}</h2>
-                  <p className='w-[260px] text-[13px]'>{cutText(item.detail, maxLength())}</p>
-                </div>
-                <div className='mt-4 flex justify-between px-4'>
-                  <div className='flex gap-2 '>
-                    <Tag className='w-4 h-4 text-[#0d1652]' />
-                    <h1 className='text-[10px] text-[#0d1652]'>ผลิตโดยเพชรอันดาไฟเบอร์กลาส</h1>
-                  </div>
 
-                  <Link href={`/album/${item.id}`}>
-                    <Button className="-mt-1 w-16 h-6 text-[10px] bg-blue-900">
-                      ดูรายละเอียด
-                    </Button>
-                  </Link>
+              <div className="px-3 flex-col flex gap-1">
+                <h2 className="text-[20px]">{item.name}</h2>
+                <p className="w-[260px] text-[13px] text-gray-600">
+                  {cutText(item.detail, maxLength())}
+                </p>
+              </div>
+
+              <div className="mt-2.5 flex justify-between px-4 items-center">
+                <div className="flex gap-2 ">
+                  <Tag className="w-4 h-4 text-[#0d1652]" />
+                  <h1 className="text-[10px] text-[#0d1652]">
+                    ผลิตโดยเพชรอันดาไฟเบอร์กลาส
+                  </h1>
                 </div>
+
+                <Link href={`/album/${item.id}`}>
+                  <Button
+                    className="md:mt-0 mt-1 md:w-16 md:h-6 w-18 h-6.5 text-[10px] bg-blue-900 hover:bg-blue-700 
+                      cursor-pointer"
+                  >
+                    ดูรายละเอียด
+                  </Button>
+                </Link>
+              </div>
             </div>
-
           </SwiperSlide>
-
         ))}
-
-
-
-
-
       </Swiper>
-
-
     </div>
-  )
+  );
 }
-
-

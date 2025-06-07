@@ -27,6 +27,7 @@ const Page = ({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeScroll, setActiveScroll] = useState(0);
 
+console.log(data)
 
   if (!data) return <div className="h-screen"><Navbar2 /><p className="p-10">ไม่พบข้อมูลอัลบั้ม</p></div>;
 
@@ -63,15 +64,15 @@ const Page = ({ data }) => {
                 className="md:w-[450px] w-[400px]"
                 onSlideChange={(swiper) => setActiveScroll(swiper.realIndex)}
               >
-                {album.map((item, index) => (
+               {data.image.map((item, index) => (
                   <SwiperSlide key={index}>
                     <Image
-                      src={item.image}
-                      alt={item.id}
-                      className="w-full h-[440px] rounded-sm object-cover mt-8"
+                    src={item}
+                    alt={`image ${index + 1}`}
+                    className="w-full h-[440px] rounded-sm object-cover mt-8"
                     />
                   </SwiperSlide>
-                ))}
+               ))}
               </Swiper>
 
               <button className="absolute top-1/2 md:-right-6 -right-0  transform -translate-y-1/2 z-10 text-blue-600">
@@ -82,31 +83,33 @@ const Page = ({ data }) => {
             <div className="p-6 lg:px-0 md:px-30 flex flex-col gap-2">
               <p className="text-[30px]">งาน : {data.name}</p>
               <p className="text-[14px] text-gray-600">11/10/2024</p>
-              <p className="text-[16px] px-2 md:w-[330px] text-gray-800">{data.detail}</p>
+              <p className="text-[16px] px-2 md:w-[330px] h-[82px] text-gray-800">{data.detail}</p>
               
 
               <div className="mt-21 flex">
                 <Swiper
                   onSwiper={setThumbsSwiper}
                   slidesPerView={4}
-                  spaceBetween={-90}
+                  spaceBetween={-120}
                   watchSlidesProgress
                   className="mt-4 w-full max-w-md"
                 >
-                  {album.map((item, index) => (
+                  {data.image.map((item, index) => (
                     <SwiperSlide key={index}>
                       <div
-                        className={`w-[30px] h-[30px] overflow-hidden rounded-md border transition-all
+                        className={`w-[45px] h-[45px] overflow-hidden rounded-md transition-all
                         cursor-pointer ${
                           activeScroll === index
-                            ? "border-2 border-gray-600"
-                            : ""
+                            ? "border-1 border-blue-900"
+                            : "border-1 border-gray-100"
                         }`}
                       >
                         <Image
-                          src={item.image}
-                          alt={data.id}
-                          className="w-30 h-30 rounded-md object-cover border border-gray-300 hover:border-red-500 transition-all"
+                          src={item}
+                         alt={`image ${index + 1} `}
+                         width={100}
+                         height={100}
+                        className="w-30 h-30 rounded-md object-cover transition-all"
                         />
                       </div>
                     </SwiperSlide>
@@ -114,19 +117,18 @@ const Page = ({ data }) => {
                 </Swiper>
               </div>
 
-                <div className="mt-8">
-                  <div className="md:w-[400px] w-full">
-                <div className="grid grid-cols-1 gap-2.5">
-                    <Button className="bg-blue-900 w-full h-[40px] shadow-md">
+              <div className="mt-8">
+                <div className="md:w-[400px] w-full">
+                  <div className="grid grid-cols-1 gap-2.5">
+                    <Button className="bg-blue-900 hover:bg-blue-700 w-full h-[40px] shadow-md">
                       ติดต่อเรา
                     </Button>
 
-                    <Button className="bg-gray-200 w-full text-black h-[40px] shadow-xs shadow-gray-400">
+                    <Button className="bg-gray-200 hover:bg-gray-300 w-full text-black h-[40px] shadow-xs shadow-gray-400">
                       ขอใบเสนอราคา <Layers className="!h-4" />
                     </Button>
                     
                   </div>
-
                 </div>
               </div>
 
@@ -155,13 +157,13 @@ const Page = ({ data }) => {
                 1024: { slidesPerView: 4, spaceBetween: -10 },
               }}
             >
-              {album.map((item, index) => (
+              {data.image.map((item, index) => (
                 <SwiperSlide key={index} className="mt-10 xl:px-10 mb-56">
                   <Link href={`/album/${item.id}`}>
                     <div className="w-full md:h-[250px] h-[200px] rounded-sm">
                       <Image
-                        src={item.image}
-                        alt={item.name}
+                        src={item}
+                        alt={`image ${index + 1} `}
                         className="w-full md:h-[250px] h-[200px] p-2 object-cover rounded-xl"
                       />
                       <div className="px-3">

@@ -19,8 +19,8 @@ const Map = () => {
   const position = [13.846450, 100.414879]; // ตัวอย่าง: กรุงเทพฯ
 
   return (
-    <>
-    <div className="mt-40 mb-10 text-center">
+    <div className="z-1">
+    <div className="mt-32 mb-10 text-center">
       <p className="text-[18px]">แผนที่จาก Google Map</p>
     </div>
     <MapContainer center={position} zoom={15} style={{ height: "280px", width: "100%" }}>
@@ -32,7 +32,7 @@ const Map = () => {
         <Popup>ร้านของเรา</Popup>
       </Marker>
     </MapContainer>
-    </>
+    </div>
   );
 }
 
