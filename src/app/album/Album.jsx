@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "swiper/css";
 import "swiper/css/pagination";
+import { motion } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
@@ -57,8 +58,12 @@ export default function Slider() {
         }}
       >
         {album.map((item, index) => (
-          <SwiperSlide key={index} className="md:px-4 px-2">
-            <div className="shadow-md w-full md:h-[440px] h-[450px] mb-50 rounded-sm">
+          <SwiperSlide key={index} className="md:px-4 px-2 hover:scale-102">
+            <motion.div 
+                  initial={{ scale: 1 }}
+      whileHover={{ scale: 1.01 }} 
+      transition={{ duration: 0.2 }}
+            className="shadow-md w-full md:h-[440px] h-[450px] mb-50 rounded-sm">
               <Image
                 src={item.image[0] || "/assets/bts.png" }
                 alt={item.name}
@@ -91,7 +96,7 @@ export default function Slider() {
                   </Button>
                 </Link>
               </div>
-            </div>
+            </motion.div >
           </SwiperSlide>
         ))}
       </Swiper>

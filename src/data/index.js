@@ -20,13 +20,15 @@ import Ku from '../assets/ku.jpg'
 import Brig from '../assets/brig.JPG'
 import Wad from '../assets/wed.png'
 
+
 export const album = [
   {
     id: "1",
     name: "ปูก้ามดาบ จังหวัดสตูล",
     detail: "ชิ้นงานนี้ทำจากไฟเบอร์กลาสโดยใช้ไฟเบอร์กลาสต้องขึ้นโครงโมเดลออกมา 2 ตัวเป็นต้นแบบ",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Crap, Crap2, Crap3]
+    image: [ Crap, Crap2, Crap3],
+    tag: "model"
     
   },
   {
@@ -34,70 +36,80 @@ export const album = [
     name: "ป้ายโลโก้ไฟเบอร์กลาส",
     detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollitLorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Ku, Crap, Crap3, Bts]
+    image: [ Ku, Crap, Crap3, Bts],
+    tag: "logo"
   },
   {
     id: "3",
     name: "สะพานอลูมิเนียมอัลลอย",
     detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Brig,Crap, Dolphine, Bts]
+    image: [ Brig,Crap, Dolphine, Bts],
+    tag: "aul"
   },
   {
     id: "4",
     name: "Dolphine",
     detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Dolphine, ]
+    image: [ Dolphine, ],
+    tag: "model"
   },
     {
     id: "5",
     name: "ป้ายโลโก้ไฟเบอร์กลาส",
     detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Wad, ]
+    image: [ Wad, ],
+    tag: "logo"
   },
     {
     id: "6",
     name: "Fiber Glass6",
     detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Cru, ]
+    image: [ Cru, ],
+    tag: "model"
   },
     {
     id: "7",
     name: "Fiber Glass7",
     detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Logo,]
+    image: [ Logo,],
+    tag: "logo"
   },
   {
     id: "8",
     name: "Fiber Glass7",
     detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Logo2, ]
+    image: [ Logo2, ],
+    tag: "logo"
   },
     {
     id: "9",
     name: "ป้ายโลโก้ Bts",
     detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Bts  ]
+    image: [ Bts  ],
+    tag: "logo"
   },
     {
     id: "10",
     name: "กระถางไฟเบอร์กลาส",
     detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Pot  ]
+    image: [ Pot  ],
+    tag: "model"
   },
       {
     id: "11",
     name: "เขื่อนไฟเบอร์กลาส",
     detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Water  ]
+    image: [ Water  ],
+    tag: "model"
   },
 ]
 

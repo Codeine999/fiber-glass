@@ -53,7 +53,7 @@ console.log(data)
         <div className="md:px-10 md:-mt-10 -mt-12">
           <div className="flex flex-col lg:flex-row justify-center md:items-start xl:gap-28 lg:gap-4">
             <div className="relative lg:max-w-[550px] w-full flex-shrink-0">
-              <button className="absolute top-1/2 md:-left-6 -left-0  transform -translate-y-1/2 z-10 text-blue-600">
+              <button className="absolute top-1/2 md:-left-6 -left-1  transform -translate-y-1/2 z-10 text-blue-600">
                 <ChevronLeft className="w-8 h-8 text-gray-300" />
               </button>
               <Swiper
@@ -61,11 +61,11 @@ console.log(data)
                 thumbs={{ swiper: thumbsSwiper }}
                 slidesPerView={1}
                 spaceBetween={10}
-                className="md:w-[450px] w-[400px]"
+                className="w-full"
                 onSlideChange={(swiper) => setActiveScroll(swiper.realIndex)}
               >
                {data.image.map((item, index) => (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide key={index} className="px-6">
                     <Image
                     src={item}
                     alt={`image ${index + 1}`}
@@ -75,7 +75,7 @@ console.log(data)
                ))}
               </Swiper>
 
-              <button className="absolute top-1/2 md:-right-6 -right-0  transform -translate-y-1/2 z-10 text-blue-600">
+              <button className="absolute top-1/2 md:-right-6 -right-0.5  transform -translate-y-1/2 z-10 text-blue-600">
                 <ChevronRight className="w-8 h-8 text-gray-300" />
               </button>
             </div>
@@ -120,9 +120,11 @@ console.log(data)
               <div className="mt-8">
                 <div className="md:w-[400px] w-full">
                   <div className="grid grid-cols-1 gap-2.5">
-                    <Button className="bg-blue-900 hover:bg-blue-700 w-full h-[40px] shadow-md">
-                      ติดต่อเรา
-                    </Button>
+                    <a href="https://line.me/ti/p/ENks3DbnbG" target="_blank" rel="noopener noreferrer">
+                      <Button className="bg-blue-900 hover:bg-blue-700 w-full h-[40px] shadow-md">
+                        ติดต่อเรา
+                      </Button>                   
+                    </a>
 
                     <Button className="bg-gray-200 hover:bg-gray-300 w-full text-black h-[40px] shadow-xs shadow-gray-400">
                       ขอใบเสนอราคา <Layers className="!h-4" />
@@ -157,12 +159,12 @@ console.log(data)
                 1024: { slidesPerView: 4, spaceBetween: -10 },
               }}
             >
-              {data.image.map((item, index) => (
+              {album.map((item, index) => (
                 <SwiperSlide key={index} className="mt-10 xl:px-10 mb-56">
                   <Link href={`/album/${item.id}`}>
                     <div className="w-full md:h-[250px] h-[200px] rounded-sm">
                       <Image
-                        src={item}
+                        src={item.image[0] || "/assets/bts.png" }
                         alt={`image ${index + 1} `}
                         className="w-full md:h-[250px] h-[200px] p-2 object-cover rounded-xl"
                       />

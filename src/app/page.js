@@ -28,24 +28,26 @@ export default function Home() {
 
   return (
     <div className="">
-    {/* <div className="bg-gradient-to-r from-[#131b26] to-[#1f2937]"> */}
+
       <Navbar />
       <Header />
 
       <section id="service">
-        <div></div>
         <div className="mt-10 flex justify-center ">
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 1 }}
+            transition={{ opacity: { duration: 0.4 }, y: { duration: 0.4, ease: 'easeOut' } }}
             className="text-black md:text-[30px] text-[25px] text-center md:w-full w-[290px]"
           >
             รับผลิตชิ้นงานไฟเบอร์กลาสและอลูมิเนียมอัลลอย
           </motion.h1>
         </div>
         <div className="mt-5 flex justify-center">
-          <h2
+          <motion.h2
+            initial={{ opacity: 0, y: 36 }}
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ opacity: { duration: 0.5 }, y: { duration: 0.4, ease: 'easeOut' } }}
             className="md:block hidden text-gray-600 text-center xl:text-[20px] text-[18px] 
             xl:w-[700px] lg:w-[600px] md:w-[490px] w-[340px]"
           >
@@ -54,7 +56,7 @@ export default function Home() {
             การประปา, วัด, หรือ บริษัท ห้างร้านต่างๆ
             ทุกงานได้รับการออกแบบและผลิตด้วยความใส่ใจในทุกรายละเอียด
             ด้วยวัสดุที่มีความแข็งแรงสูง
-          </h2>
+          </motion.h2>
 
           <h2
             className="md:hidden block text-gray-600 text-center xl:text-[20px] text-[18px] 
@@ -70,87 +72,97 @@ export default function Home() {
           <div className="bg-blue-900 w-[140px] h-[4px]" />
         </div>
       </section>
-              {/* แม้เพิ่งเริ่มให้บริการออนไลน์ แต่ประสบการณ์ที่เรามีสามารถตอบโจทย์ลูกค้าได้ */}
+      {/* แม้เพิ่งเริ่มให้บริการออนไลน์ แต่ประสบการณ์ที่เรามีสามารถตอบโจทย์ลูกค้าได้ */}
       <section id="about">
-        <div className="md:mt-20 mt-18 xl:px-45 lg:px-4 md:px-12 px-4 lg:flex lg:justify-between">
-          <div className="border-1 border-gray-200 xl:px-10 lg:px-8 md:px-14 px-6 py-4 shadow-sm hover:scale-102 rounded-2xl">
+        <div className="md:mt-20 mt-18 xl:px-36 lg:px-14 md:px-12 px-4 lg:flex lg:justify-between">
+          <motion.div
+            initial={{ scale: 1, opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.4 }}
+            whileHover={{ scale: 1.01 }} 
+            className="border-1 border-gray-200 xl:px-10 lg:px-8 md:px-14 px-6 py-4 shadow-sm rounded-2xl"
+          >
             <div className="mt-4">
-            <motion.div
-              ref={ref}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: inView ? 1 : 0, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="-mx-2 lg:text-[22px] text-[20px]"
-            >
-              <Topic title="ทำไมถึงต้องเลือกเรา" />
-            </motion.div>
-            <p className="mt-1 -mx-2 lg:w-[400px] md:w-[400px] w-full text-[16px] text-gray-600">
-              เรามีประสบการณ์ในงานไฟเบอร์กลาสและงานปะติมากรรมมากกว่า 20 ปี
-              ผลิตงานโดยตรงจากช่าง
-              <span className="text-gray-1000">ไม่ผ่านนายหน้า</span>
+              <motion.div
+                ref={ref}
+                // initial={{ opacity: 0, y: 20 }}
+                // animate={{ opacity: inView ? 1 : 0, y: 0 }}
+                // transition={{ duration: 0.3 }}
+                className="-mx-2 lg:text-[22px] text-[20px]"
+              >
+                <Topic title="ทำไมถึงต้องเลือกเรา" />
+              </motion.div>
+              <p className="mt-1 -mx-2 lg:w-[400px] md:w-[400px] w-full text-[16px] text-gray-600">
+                เรามีประสบการณ์ในงานไฟเบอร์กลาสและงานปะติมากรรมมากกว่า 20 ปี
+                ผลิตงานโดยตรงจากช่าง
+                <span className="text-gray-1000">ไม่ผ่านนายหน้า</span>
+              </p>
 
-            </p>
-
-            <div className="lg:mt-8 md:mt-4 mt-6">
-              <div className="-mx-4 flex gap-4">
-                <Check className="text-green-600 lg:w-[40px] lg:h-[40px] md:w-[30px] w-[32px] h-[32px]" />
-                <h4 className="-mx-2 lg:text-[22px] text-[20px]">
-                  ประสบการณ์มากกว่า 20 ปี
-                </h4>
-              </div>
-            </div>
-
-            <div className="md:mt-4 mt-6">
-              <div className="-mx-4 flex gap-4">
-                <Check className="text-green-600 lg:w-[40px] lg:h-[40px] md:w-[30px] w-[32px] h-[32px]" />
-                <h4 className="-mx-2 lg:text-[22px] text-[20px]">
-                  มีโรงงานผลิตครบวงจร
-                </h4>
-              </div>
-            </div>
-
-            <div className=" md:mt-4 mt-6">
-              <div className="-mx-4 flex gap-4">
-                <Check className="text-green-600 lg:w-[40px] lg:h-[40px] md:w-[30px] w-[32px] h-[32px]" />
-                <motion.h4
-                  ref={ref}
-                  initial={{ opacity: 0, y: 90 }}
-                  animate={{ opacity: inView ? 1 : 0, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="-mx-2 lg:text-[22px] text-[20px]"
-                >
-                  ผลิตตรงไม่ผ่านนายหน้า
-                </motion.h4>
-              </div>
-              <div className="mt-6">
-                <div className="lg:w-[360px] md:w-[400px]">
-                  <p className="text-gray-600">
-                    ผลิตกับเราโดยตรงไม่ผ่านนายหน้าสามารถช่วยลดต้นทุนที่ไม่จำเป็นทำให้ลูกค้าได้ราคายุติธรรม
-                  </p>
+              <div className="lg:mt-8 md:mt-4 mt-6">
+                <div className="-mx-4 flex gap-4">
+                  <Check className="text-green-600 lg:w-[40px] lg:h-[40px] md:w-[30px] w-[32px] h-[32px]" />
+                  <h4 className="-mx-2 lg:text-[22px] text-[20px]">
+                    ประสบการณ์มากกว่า 20 ปี
+                  </h4>
                 </div>
-             
               </div>
-                <div className="mt-6">
-                <div className="w-full">
-                  <div className="grid grid-cols-2 gap-2.5">
-                    <Button className="bg-blue-900 w-full h-[40px] shadow-md hover:bg-blue-700">
-                      ติดต่อเรา
-                    </Button>
 
-                    <Button 
-                      className="bg-gray-200 w-full text-black h-[40px] shadow-xs shadow-gray-400
+              <div className="md:mt-4 mt-6">
+                <div className="-mx-4 flex gap-4">
+                  <Check className="text-green-600 lg:w-[40px] lg:h-[40px] md:w-[30px] w-[32px] h-[32px]" />
+                  <h4 className="-mx-2 lg:text-[22px] text-[20px]">
+                    มีโรงงานผลิตครบวงจร
+                  </h4>
+                </div>
+              </div>
+
+              <div className=" md:mt-4 mt-6">
+                <div className="-mx-4 flex gap-4">
+                  <Check className="text-green-600 lg:w-[40px] lg:h-[40px] md:w-[30px] w-[32px] h-[32px]" />
+                  <motion.h4
+                    ref={ref}
+                    // initial={{ opacity: 0, y: 90 }}
+                    // animate={{ opacity: inView ? 1 : 0, y: 0 }}
+                    // transition={{ duration: 0.3 }}
+                    className="-mx-2 lg:text-[22px] text-[20px]"
+                  >
+                    ผลิตตรงไม่ผ่านนายหน้า
+                  </motion.h4>
+                </div>
+                <div className="mt-6">
+                  <div className="lg:w-[360px] md:w-[400px]">
+                    <p className="text-gray-600">
+                      ผลิตกับเราโดยตรงไม่ผ่านนายหน้าสามารถช่วยลดต้นทุนที่ไม่จำเป็นทำให้ลูกค้าได้ราคายุติธรรม
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <div className="w-full">
+                    <div className="grid grid-cols-2 gap-2.5">
+
+                      <a href="https://line.me/ti/p/ENks3DbnbG" target="_blank" rel="noopener noreferrer">
+                        <Button className="bg-blue-900 w-full h-[40px] shadow-md hover:bg-blue-700">
+                          ติดต่อเรา
+                        </Button>
+                      </a>
+
+                      <Button
+                        className="bg-gray-200 w-full text-black h-[40px] shadow-xs shadow-gray-400
                      hover:bg-gray-300"
-                    >
-                      ขอใบเสนอราคา <Layers className="!h-4" />
-                    </Button>
-                    
+                      >
+                        ขอใบเสนอราคา <Layers className="!h-4" />
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          </div>
-          <div className="lg:mt-0 mt-12 lg:w-[500px] w-full">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 1, opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.4 }}
+            className="lg:mt-0 mt-12 lg:w-[500px] w-full">
             <div className="grid grid-cols-2 gap-4">
               <div className="flex justify-center">
                 <Image
@@ -174,7 +186,7 @@ export default function Home() {
                 className="w-full md:h-[250px] h-[220px] rounded-lg object-cover border-1  border-gray-200"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -199,43 +211,31 @@ export default function Home() {
       <div className="mt-10 h-[380px] w-full">
         <div className="flex justify-center">
           <div className="mt-8 mb-5">
-            <Topic title="คำค้นหาสินค้า" />
+            <Topic title="คำค้นหาบริการ" />
           </div>
         </div>
         <div className="mt-4 flex justify-center">
-          <div className="grid md:grid-cols-3 grid-cols-2 md:gap-15 gap-x-4 gap-y-8">
-            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
-              <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900 whitespace-nowrap">
-                  ผลิตภัทฑ์ไฟเบอร์กลาส
-                </h2>
-              </div>
-            </div>
-            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
-              <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">ผลิตโมเดลแม่พิมพ์</h2>
-              </div>
-            </div>
-            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
-              <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">งานหน่วยงานราชการ</h2>
-              </div>
-            </div>
-            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
-              <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">งานหล่อปูนซิเมนต์</h2>
-              </div>
-            </div>
-            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
-              <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">งานโต๊ะ เก้าอี้ สระว่ายน้ำ</h2>
-              </div>
-            </div>
-            <div className="md:w-[200px] w-[180px] h-[40px] border-1 border-blue-900 rounded-4xl">
-              <div className="text-center items-center mt-1.5 ">
-                <h2 className="text-blue-900">งานสถาปัตยกรรม</h2>
-              </div>
-            </div>
+          <div className="grid md:grid-cols-3 grid-cols-2 md:gap-15 gap-x-10 gap-y-8">
+
+            <Button variant="outline" size="butt">
+              <h2 className="text-blue-900 text-md">ผลิตภัทฑ์ไฟเบอร์กลาส</h2>
+            </Button>
+            <Button variant="outline" className="h-[40px]">
+              <h2 className="text-blue-900 text-md">ผลิตโมเดลแม่พิมพ์</h2>
+            </Button>
+            <Button variant="outline" className="h-[40px]">
+              <h2 className="text-blue-900 text-md">งานหน่วยงานราชการ</h2>
+            </Button>
+            <Button variant="outline" className="h-[40px]">
+              <h2 className="text-blue-900 text-md">งานหล่อปูนซิเมนต์</h2>
+            </Button>
+            <Button variant="outline" className="h-[40px]">
+              <h2 className="text-blue-900 text-md">งานโต๊ะ เก้าอี้ สระว่ายน้ำ</h2>
+            </Button>
+            <Button variant="outline" className="h-[40px]">
+              <h2 className="text-blue-900 text-md">งานสถาปัตยกรรม</h2>
+            </Button>
+
           </div>
         </div>
       </div>
@@ -260,6 +260,7 @@ export default function Home() {
         <EndPoint />
       </div>
       <Faq />
+      <EndPoint />
       <MapClientWrapper />
 
       <section id="contact">
@@ -276,13 +277,30 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <h6 className="mt-2 md:w-[490px] w-[350px] text-white md:text-[20px] text-center">
-              54/107 บางใหญ่ซิตี้ ต.เสาธงหิน อ.บางใหญ่ นนทบุรี 11140 เวลาทำการ 8:30 - 18:00 น
+              54/107 บางใหญ่ซิตี้ ต.เสาธงหิน อ.บางใหญ่ นนทบุรี 11140 เวลาทำการ
+              8:30 - 18:00 น
             </h6>
           </div>
 
-          <div className="flex justify-center gap-8">
-            <p className="md:mt-10 mt-8 text-white text-center">FB </p>
-            <p className="md:mt-10 mt-8 text-white text-center">Line </p>
+          <div className="mt-8 flex justify-center gap-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <Image 
+                src="/assets/fb.png"
+                alt="line"
+                width={50}
+                height={50}
+                className="hover:scale-105 cursor-pointer" 
+              />
+            </a>
+            <a href="https://line.me/ti/p/ENks3DbnbG" target="_blank" rel="noopener noreferrer">
+              <Image 
+                src="/assets/line.svg.png"
+                alt="line"
+                width={30}
+                height={30}
+                className="mt-2.5 hover:scale-105 cursor-pointer" 
+              />
+            </a>
           </div>
           <p className="md:mt-10 mt-8 text-white text-center">
             อีเมล : Petunda911@gmail.com{" "}

@@ -49,14 +49,16 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div
-      className={`sticky top-0 w-full h-[60px] z-999  transition-colors duration-300 ${
-        scrolled ? "bg-gray-900 bg-opacity-95 shadow-md" : "bg-transparent"
-      }`}
-    >
+<div
+  className={`sticky  top-0 left-0 right-0 w-full h-[60px] z-999 transition-all duration-500 ${
+    scrolled
+      ? "h-[62px] bg-gray-900 bg-opacity-95 shadow-md px-1 d"
+      : "bg-transparent"
+  }`}
+>
       <div className="flex justify-between xl:px-28 md:p-4 md:px-10 px-5">
         <div className="md:mt-0 mt-4 md:px-0 px-2">
-          <h1 className="text-white text-[20px]">Fiber</h1>
+          <h1 className="text-white text-[20px]">FG</h1>
         </div>
         {/* เมนู desktop */}
         <div className="md:block hidden">

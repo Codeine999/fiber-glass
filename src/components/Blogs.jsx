@@ -9,7 +9,7 @@ import { Pagination } from "swiper/modules";
 import { blogs } from "@/data";
 
 const Blogs = () => {
-  const maxLength = () => 23;
+  const maxLength = () => 20;
 
   const cutText = (text, maxLength) =>
     text.length <= maxLength ? text : text.slice(0, maxLength) + "..";

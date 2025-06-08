@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 
@@ -56,14 +57,24 @@ const Header = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.6 }}
-              className="text-white shadow-lg"
+              className="text-white"
             >
               รับผลิตชิ้นงานไฟเบอร์กลาสตามแบบ สำหรับงานราชการ วัด บริษัท
               ห้างร้าน และงานตกแต่ง เช่น โลโก้ โต๊ะ เก้าอี้ สระว่ายน้ำ ฯลฯ
               พร้อมผลิตตามความต้องการ
             </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.6 }}
+          className="mt-2 text-white"
+        >
+          โทร 0830391282
+        </motion.p>
           </div>
         </div>
+
+
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -71,9 +82,13 @@ const Header = () => {
           transition={{ duration: 0.3, delay: 0.9 }}
           className="flex md:justify-start justify-center"
         >
+          
           <Button className="md:mt-28 mt-34 bg-blue-900 hover:bg-blue-800 w-[180px] h-[44px] text-[16px]">
-            ติดต่อเรา
+            <a href="https://line.me/ti/p/ENks3DbnbG" target="_blank" rel="noopener noreferrer">
+              ติดต่อเรา
+            </a>
           </Button>
+          
         </motion.div>
       </div>
     </div>
