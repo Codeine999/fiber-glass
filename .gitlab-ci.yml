@@ -1,7 +1,0 @@
-stages:
-  - deploy
-
-deploy:
-  stage: deploy
-  image: alpine:latest
-  before_script:
