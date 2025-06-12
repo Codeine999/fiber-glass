@@ -19,17 +19,35 @@ import FiberPic from '../assets/firberpic.jpg'
 import Ku from '../assets/ku.jpg'
 import Brig from '../assets/brig.JPG'
 import Wad from '../assets/wed.png'
+import WaterFi from '../assets/waterfilber.JPG'
 
 
 export const album = [
-  {
+    {
     id: "1",
+    name: "แผ่นหนังเขื่อนไฟเบอร์กลาส",
+    image: [ WaterFi, Water],
+    tag: "model"
+    
+  },
+  {
+    id: "2",
     name: "ปูก้ามดาบ จังหวัดสตูล",
-    detail: "ชิ้นงานนี้ทำจากไฟเบอร์กลาสโดยใช้ไฟเบอร์กลาสต้องขึ้นโครงโมเดลออกมา 2 ตัวเป็นต้นแบบ",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
     image: [ Crap, Crap2, Crap3],
     tag: "model"
     
+  },
+  {
+    id: "3",
+    name: "สะพานอลูมิเนียมอัลลอย",
+    image: [ Brig],
+    tag: "aul"
+  },
+    {
+    id: "4",
+    name: "โมเดลปลาโลมา",
+    image: [ Dolphine, ],
+    tag: "model"
   },
   {
     id: "2",
@@ -38,22 +56,6 @@ export const album = [
     detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
     image: [ Ku, Crap, Crap3, Bts],
     tag: "logo"
-  },
-  {
-    id: "3",
-    name: "สะพานอลูมิเนียมอัลลอย",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Brig,Crap, Dolphine, Bts],
-    tag: "aul"
-  },
-  {
-    id: "4",
-    name: "Dolphine",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Dolphine, ],
-    tag: "model"
   },
     {
     id: "5",
@@ -98,17 +100,7 @@ export const album = [
     {
     id: "10",
     name: "กระถางไฟเบอร์กลาส",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
     image: [ Pot  ],
-    tag: "model"
-  },
-      {
-    id: "11",
-    name: "เขื่อนไฟเบอร์กลาส",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Water  ],
     tag: "model"
   },
 ]

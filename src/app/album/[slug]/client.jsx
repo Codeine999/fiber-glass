@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "swiper/css";
@@ -24,10 +24,33 @@ import { Button } from "@/components/ui/button";
 
 
 const Page = ({ data }) => {
+  const [windowWidth, setWindowWidth] = useState(0);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeScroll, setActiveScroll] = useState(0);
 
-console.log(data)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  const maxLength = () =>
+    windowWidth < 768
+      ? 20
+      : windowWidth < 1000
+      ? 40
+      : windowWidth <= 1100
+      ? 40
+      : 40;
+
+  const cutText = (text, maxLength) =>
+    text.length <= maxLength ? text : text.slice(0, maxLength) + "..";
 
   if (!data) return <div className="h-screen"><Navbar2 /><p className="p-10">ไม่พบข้อมูลอัลบั้ม</p></div>;
 
@@ -65,11 +88,11 @@ console.log(data)
                 onSlideChange={(swiper) => setActiveScroll(swiper.realIndex)}
               >
                {data.image.map((item, index) => (
-                  <SwiperSlide key={index} className="px-6">
+                  <SwiperSlide key={index} className="md:px-6 px-9">
                     <Image
                     src={item}
                     alt={`image ${index + 1}`}
-                    className="w-full h-[440px] rounded-sm object-cover mt-8"
+                    className="md:w-full md:h-[440px] w-[370px] h-[390px] rounded-sm object-cover mt-8"
                     />
                   </SwiperSlide>
                ))}
@@ -81,12 +104,10 @@ console.log(data)
             </div>
 
             <div className="p-6 lg:px-0 md:px-30 flex flex-col gap-2">
-              <p className="text-[30px]">งาน : {data.name}</p>
+              <p className="text-[30px]">ชื่องาน {data.name}</p>
               <p className="text-[14px] text-gray-600">11/10/2024</p>
-              <p className="text-[16px] px-2 md:w-[330px] h-[82px] text-gray-800">{data.detail}</p>
-              
 
-              <div className="mt-21 flex">
+              <div className="mt-2 flex">
                 <Swiper
                   onSwiper={setThumbsSwiper}
                   slidesPerView={4}
@@ -120,7 +141,7 @@ console.log(data)
               <div className="mt-8">
                 <div className="md:w-[400px] w-full">
                   <div className="grid grid-cols-1 gap-2.5">
-                    <a href="https://line.me/ti/p/ENks3DbnbG" target="_blank" rel="noopener noreferrer">
+                    <a href="https://line.me/ti/p/9EhMYc_54F" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-blue-900 hover:bg-blue-700 w-full h-[40px] shadow-md">
                         ติดต่อเรา
                       </Button>                   
@@ -140,7 +161,7 @@ console.log(data)
 
           <EndPoint />
 
-          <div className="mt-14 xl:px-20 md:px-0 px-10">
+          <div className="mt-14 xl:px-20 md:px-0 px-6">
             <p className="text-[25px]">งานที่คล้ายกัน</p>
 
             <Swiper
@@ -168,8 +189,8 @@ console.log(data)
                         alt={`image ${index + 1} `}
                         className="w-full md:h-[250px] h-[200px] p-2 object-cover rounded-xl"
                       />
-                      <div className="px-3">
-                        <h2 className="text-[20px]">{item.name}</h2>
+                      <div className="px-2">
+                        <h2 className="text-[16px]">{cutText(item.name, maxLength(windowWidth))}</h2>
                       </div>
                     </div>
                   </Link>

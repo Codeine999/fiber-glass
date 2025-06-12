@@ -1,95 +1,105 @@
-      <section id="about">
-        <div className="md:mt-28 mt-18 xl:px-45 md:px-10 px-7 md:flex md:justify-between ">
-          <div className="mt-4">
-            <motion.div
-              ref={ref}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: inView ? 1 : 0, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="-mx-2 lg:text-[22px] text-[20px]"
-            >
-              <Topic title="ทำไมถึงต้องเลือกเรา" />
-            </motion.div>
-            <p className="mt-1 -mx-2 lg:w-[400px] w-[370px] lg:text-[16px] text-[16px] text-gray-600">
-              เรามีประสบการณ์ในงานไฟเบอร์กลาสและงานปะติมากรรมมากกว่า 20 ปี
-              ผลิตงานโดยตรงจากช่าง
-              <span className="text-gray-1000">ไม่ผ่านนายหน้า</span>
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import "swiper/css";
+import "swiper/css/pagination";
+import { motion } from "framer-motion";
 
-            </p>
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import { album } from "@/data";
+import { Button } from "../../components/ui/button";
+import { Tag } from "lucide-react";
 
-            <div className="lg:mt-8 md:mt-4 mt-6">
-              <div className="flex gap-4">
-                <Check className="mt-3 text-green-600 lg:w-[40px] lg:h-[40px] md:w-[30px] w-[32px] h-[32px]" />
-                <h4 className="-mx-2 lg:text-[22px] text-[20px]">
-                  ประสบการณ์มากกว่า 20 ปี
-                </h4>
-              </div>
-              <div className="lg:-mt-3 md:-mt-4 -mt-3 lg:px-12 md:px-10 px-10 ">
-                <p className="xl:w-[330px] lg:w-[300px] md:w-[309px] w-[290px] lg:text-[14px] text-[15px] text-gray-600">
-                  เรามีประสบการณ์หลายปีในการออกแบบและผลิตงานไฟเบอร์กลาสเข้าใจความต้องการของลูกค้า
-                </p>
-              </div>
-            </div>
+export default function Slider() {
+  const [windowWidth, setWindowWidth] = useState(0);
 
-            <div className="lg:mt-8 md:mt-4 mt-6">
-              <div className="flex gap-4">
-                <Check className="mt-3 text-green-600 lg:w-[40px] lg:h-[40px] w-[35px] h-[35px] " />
-                <h4 className="-mx-2 lg:text-[22px] text-[20px]">
-                  มีโรงงานผลิตครบวงจร
-                </h4>
-              </div>
-              <div className="lg:-mt-3 md:-mt-4 -mt-3 lg:px-12 md:px-10 px-10 ">
-                <p className="xl:w-[330px] lg:w-[300px] md:w-[350px] w-[290px] lg:text-[14px] text-[15px] text-gray-600">
-                  มีโรงงานผลิตของเราเอง
-                  ตั้งแต่ต้นจนจบควบคุมได้ทุกขั้นตอนเพื่อให้มั่นใจว่าได้มาตรฐานและส่งมอบตรงเวลา
-                </p>
-              </div>
-            </div>
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
 
-            <div className="lg:mt-8 md:mt-4 mt-6">
-              <div className="flex gap-4">
-                <Check className="mt-3 text-green-600 lg:w-[40px] lg:h-[40px] w-[35px] h-[35px] " />
-                <motion.h4
-                  ref={ref}
-                  initial={{ opacity: 0, y: 90 }}
-                  animate={{ opacity: inView ? 1 : 0, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="-mx-2 lg:text-[22px] text-[20px]"
-                >
-                  ผลิตตรงไม่ผ่านนายหน้า
-                </motion.h4>
-              </div>
-              <div className="lg:-mt-3 md:-mt-4 -mt-3 lg:px-12 md:px-10 px-10 ">
-                <p className="xl:w-[330px] lg:w-[300px] md:w-[310px] w-[290px] lg:text-[14px] text-[15px] text-gray-600">
-                  ผลิตกับเราโดยตรงไม่ผ่านนายหน้าสามารถช่วยลดต้นทุนที่ไม่จำเป็นทำให้ลูกค้าได้ราคายุติธรรม
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="md:mt-0 mt-12 lg:w-[500px] w-full">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex justify-center">
-                <Image
-                  src={Pu}
-                  alt="Nike Sneaker 1"
-                  className="w-full h-[200px] rounded-lg object-cover border-1  border-gray-200"
-                />
-              </div>
-              <div className="flex justify-center">
-                <Image
-                  src={Dolphine}
-                  alt="Nike Sneaker 2"
-                  className="w-full h-[200px] rounded-lg object-cover border-1  border-gray-200"
-                />
-              </div>
-            </div>
-            <div className="mt-3 flex justify-center">
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  const maxLength = () =>
+    windowWidth < 768
+      ? 86
+      : windowWidth < 1000
+      ? 86
+      : windowWidth <= 1100
+      ? 86
+      : 86;
+
+  const cutText = (text, maxLength) =>
+    text.length <= maxLength ? text : text.slice(0, maxLength) + "..";
+
+  return (
+    <div className="md:mt-14 mt-10 overflow-hidden">
+      <Swiper
+        modules={[Pagination]}
+        grabCursor={true}
+        initialSlide={0}
+        centeredSlides={false}
+        slidesPerView={3}
+        spaceBetween={80}
+        speed={800}
+        slideToClickedSlide={true}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          0: { slidesPerView: 1, spaceBetween: 10 },
+          768: { slidesPerView: 2, spaceBetween: -5 },
+          1024: { slidesPerView: 3, spaceBetween: -10 },
+          1400: { slidesPerView: 3, spaceBetween: 5 },
+        }}
+      >
+        {album.map((item, index) => (
+          <SwiperSlide key={index} className="md:px-4 px-2 hover:scale-102">
+            <motion.div 
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.01 }} 
+            transition={{ duration: 0.2 }}
+            className="shadow-md w-full h-[408px] mb-50 rounded-sm">
               <Image
-                src={Brig}
-                alt="Nike Sneaker 3"
-                className="w-full h-[260px] rounded-lg object-cover border-1  border-gray-200"
+                src={item.image[0] || "/assets/bts.png" }
+                alt={item.name}
+                width={500}
+                height={300}
+                className="w-full h-[320px] p-2 object-cover rounded-xl"
               />
-            </div>
-          </div>
-        </div>
-      </section>
+
+              <div className="px-3 py-1 flex-col flex gap-1">
+                <h2 className="text-[20px]">{item.name}</h2>
+                {/* <p className="w-[260px] text-[13px] text-gray-600">
+                  {cutText(item.detail, maxLength())}
+                </p> */}
+              </div>
+
+              <div className="mt-1 flex justify-between px-4 items-center">
+                <div className="flex gap-2 ">
+                  <Tag className="w-4 h-4 text-[#0d1652]" />
+                  <h1 className="text-[10px] text-[#0d1652]">
+                    ผลิตโดยเพชรอันดาไฟเบอร์กลาส
+                  </h1>
+                </div>
+
+                <Link href={`/album/${item.id}`}>
+                  <Button
+                    className="md:mt-0 mt-1 md:w-16 md:h-6 w-22 h-7 text-[10px] bg-blue-900 hover:bg-blue-700 
+                      cursor-pointer"
+                  >
+                    ดูรายละเอียด
+                  </Button>
+                </Link>
+              </div>
+            </motion.div >
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+}

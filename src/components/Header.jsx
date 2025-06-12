@@ -84,7 +84,7 @@ const Header = () => {
         >
           
           <Button className="md:mt-28 mt-34 bg-blue-900 hover:bg-blue-800 w-[180px] h-[44px] text-[16px]">
-            <a href="https://line.me/ti/p/ENks3DbnbG" target="_blank" rel="noopener noreferrer">
+            <a href="https://line.me/ti/p/9EhMYc_54F" target="_blank" rel="noopener noreferrer">
               ติดต่อเรา
             </a>
           </Button>

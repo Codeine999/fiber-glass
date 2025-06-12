@@ -140,7 +140,7 @@ export default function Home() {
                   <div className="w-full">
                     <div className="grid grid-cols-2 gap-2.5">
 
-                      <a href="https://line.me/ti/p/ENks3DbnbG" target="_blank" rel="noopener noreferrer">
+                      <a href="https://line.me/ti/p/9EhMYc_54F" target="_blank" rel="noopener noreferrer">
                         <Button className="bg-blue-900 w-full h-[40px] shadow-md hover:bg-blue-700">
                           ติดต่อเรา
                         </Button>
