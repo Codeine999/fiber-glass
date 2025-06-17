@@ -93,7 +93,7 @@ export default function Slider() {
       <div className="flex justify-center md:py-16 py-10">
         <button
           onClick={handleLoadMore}
-          className="text-lg  px-6 py-2 shadow-sm rounded-2xl">
+          className="text-lg  px-6 py-2 shadow-xs cursor-pointer rounded-2xl">
           แสดงเพิ่มเติม
         </button>
       </div>

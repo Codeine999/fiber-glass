@@ -3,8 +3,8 @@ import Crap2 from '../assets/crap2.JPG'
 import Crap3 from '../assets/crap3.JPG'
 
 import Cru from '../assets/cru.jpg'
-import Cru3 from '../assets/cru2.JPG'
-import Cru4 from '../assets/cru3.jpg'
+import Cru2 from '../assets/cru2.JPG'
+import Cru3 from '../assets/cru3.jpg'
 
 import Dolphine from '../assets/dolphine.png'
 
@@ -20,7 +20,9 @@ import Ku from '../assets/ku.jpg'
 import Brig from '../assets/brig.JPG'
 import Wad from '../assets/wed.png'
 import WaterFi from '../assets/waterfilber.JPG'
-
+import Blogs from '../assets/blogs.webp'
+import Blogs2 from '../assets/blogs2.jpg'
+import Blogs3 from '../assets/blogs3.webp'
 
 export const album = [
     {
@@ -50,55 +52,43 @@ export const album = [
     tag: "model"
   },
   {
-    id: "2",
-    name: "ป้ายโลโก้ไฟเบอร์กลาส",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollitLorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Ku, Crap, Crap3, Bts],
-    tag: "logo"
-  },
-    {
     id: "5",
     name: "ป้ายโลโก้ไฟเบอร์กลาส",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Wad, ],
+    image: [ Ku ],
     tag: "logo"
   },
     {
     id: "6",
-    name: "Fiber Glass6",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
-    image: [ Cru, ],
-    tag: "model"
+    name: "ป้ายโลโก้ไฟเบอร์กลาส",
+    image: [ Wad, ],
+    tag: "logo"
   },
     {
     id: "7",
-    name: "Fiber Glass7",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
+    name: "ป้ายโลโก้ไฟเบอร์กลาส",
     image: [ Logo,],
     tag: "logo"
   },
   {
     id: "8",
-    name: "Fiber Glass7",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
+    name: "ป้ายมหาลัยไฟเบอร์กลาส",
     image: [ Logo2, ],
     tag: "logo"
   },
     {
     id: "9",
     name: "ป้ายโลโก้ Bts",
-    detail: "Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.Lorem dolor occaecat occaecat exercitation fugiat aliquip qui ut amet mollit.",
-    detail2: "Laborum velit est commodo sit anim id consequat reprehenderit eu eu. Commodo ad eiusmod sit laborum sunt nulla ut ipsum. Nulla labore laboris Lorem adipisicing consequat eu dolor nisi sit occaecat dolor ad qui excepteur. Dolore sint et et aliquip irure minim qui consectetur elit elit magna ad veniam mollit.",
     image: [ Bts  ],
     tag: "logo"
   },
-    {
+  {
     id: "10",
+    name: "กำแพงไฟเบอร์กลาส",
+    image: [ Cru, Cru2, Cru3 ],
+    tag: "model"
+  },
+    {
+    id: "11",
     name: "กระถางไฟเบอร์กลาส",
     image: [ Pot  ],
     tag: "model"
@@ -154,7 +144,7 @@ export const album = [
       content6: '',
       conclusion: 'การเลือกใช้ไฟเบอร์กลาสแต่ละประเภทขึ้นอยู่กับลักษณะงานและความต้องการด้านความแข็งแรงและความยืดหยุ่น การเข้าใจประเภทของไฟเบอร์กลาสจะช่วยให้การผลิตงานมีประสิทธิภาพและคุ้มค่ามากขึ้น',
       tag: 'ไฟเบอร์กลาส',
-      image: FiberPic
+      image: Blogs2
     },
     {
       id: 'fiberglass-pros-cons1',
@@ -172,7 +162,7 @@ export const album = [
       content7: '- มีโอกาสแตกหักหรือร้าวได้เมื่อโดนแรงกระแทกหนัก\n- การซ่อมแซมต้องใช้เทคนิคและวัสดุเฉพาะ ทำให้ซ่อมยุ่งยาก\n- ฝุ่นเส้นใยแก้วในกระบวนการผลิตเป็นอันตรายต่อสุขภาพ หากไม่มีการป้องกันที่ดี\n- ไม่เหมาะกับงานที่ต้องรับแรงกดหรือแรงกระทำที่ไม่สม่ำเสมอเป็นเวลานาน\n- บางครั้งอาจมีราคาสูงกว่าวัสดุบางประเภท ขึ้นกับคุณภาพและการผลิต',
       conclusion: 'โดยรวมแล้ว ไฟเบอร์กลาสเป็นวัสดุที่มีประโยชน์และตอบโจทย์งานหลายประเภท โดยเฉพาะงานที่ต้องการน้ำหนักเบาและความทนทาน แต่การเลือกใช้ควรพิจารณาข้อจำกัดและข้อควรระวัง เพื่อให้ได้งานที่มีคุณภาพและอายุการใช้งานยาวนาน',
       tag: 'ไฟเบอร์กลาส',
-      image: FiberPic
+      image: Blogs
     },
     {
       id: 'is-fiberglass-environmentally-safe1',
@@ -189,7 +179,7 @@ export const album = [
       content6: '',
       conclusion: '',
       tag: 'ไฟเบอร์กลาส',
-      image: FiberPic
+      image: Blogs3
     },
     {
       id: 'what-is-fiberglass5',
@@ -242,6 +232,7 @@ export const album = [
       tag: 'ไฟเบอร์กลาส',
       image: FiberPic
     },
+    
     //     {
     //   id: 'what-is-fiberglass8',
     //   title: 'ขั้นตอนการผลิตงานไฟเบอร์กลาส',
