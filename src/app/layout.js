@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" />
         {/* Google Tag */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17175492797"></script>
         <script dangerouslySetInnerHTML={{

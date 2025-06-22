@@ -28,7 +28,6 @@ const Page = ({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeScroll, setActiveScroll] = useState(0);
 
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       setWindowWidth(window.innerWidth);
