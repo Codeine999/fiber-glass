@@ -1,6 +1,6 @@
 import "./globals.css";
 import Footer from "@/components/Footer";
-import { Kanit } from 'next/font/google'
+import { Kanit, Pridi } from 'next/font/google'
 import "leaflet/dist/leaflet.css";
 
 
@@ -11,6 +11,14 @@ const kanit = Kanit({
   style: ['normal'],
   variable: '--font-kanit',
 })
+
+const pridi = Pridi({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal'],
+  variable: '--font-pridi',
+})
+
 
 export const metadata = {
   title: "เพชรอันดา ไฟเบอร์กลาส รับออกแบบและผลิตชิ้นงานไฟเบอร์กลาส",
@@ -42,7 +50,7 @@ export default function RootLayout({ children }) {
           `
         }} />
       </head>
-      <body className={kanit.className}>
+      <body className={`${kanit.className} ${pridi}`}>
         {children}
         <Footer />
       </body>

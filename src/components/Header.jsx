@@ -4,8 +4,6 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 
-import Mark from "../../public/assets/mark.png";
-
 import Hero from "../../public/assets/header4.png";
 
 const Header = () => {

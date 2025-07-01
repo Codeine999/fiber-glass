@@ -11,8 +11,15 @@ import { blogs } from "@/data";
 const Blogs = () => {
   const maxLength = () => 20;
 
-  const cutText = (text, maxLength) =>
-    text.length <= maxLength ? text : text.slice(0, maxLength) + "..";
+  const cutText = (text, maxLength) => {
+    if (text && text.length <= maxLength) {
+      return text;
+    } else if (text) {
+      return text.slice(0, maxLength) + "..";
+    } else {
+      return ""; // Return empty string if text is undefined
+    }
+  };
   return (
     <div className="mt-14 overflow-hidden">
       <Swiper
@@ -48,9 +55,9 @@ const Blogs = () => {
                     {cutText(item.preContent, maxLength())}
                   </p>
 
-                
+
                 </div>
-                
+
               </Link>
             </div>
           </SwiperSlide>

@@ -92,7 +92,7 @@ export default function Home() {
               >
                 <Topic title="ทำไมถึงต้องเลือกเรา" />
               </motion.div>
-              <p className="mt-1 -mx-2 lg:w-[400px] md:w-[400px] w-full text-[16px] text-gray-600">
+              <p className="mt-1 -mx-2 lg:w-[400px] font- md:w-[400px] w-full text-[16px] text-gray-600">
                 เรามีประสบการณ์ในงานไฟเบอร์กลาสและงานปะติมากรรมมากกว่า 20 ปี
                 ผลิตงานโดยตรงจากช่าง
                 <span className="text-gray-1000">ไม่ผ่านนายหน้า</span>
@@ -292,7 +292,7 @@ export default function Home() {
                 className="hover:scale-105 cursor-pointer" 
               />
             </a>
-            <a href="https://line.me/ti/p/ENks3DbnbG" target="_blank" rel="noopener noreferrer">
+            <a href="https://line.me/ti/p/9EhMYc_54F" target="_blank" rel="noopener noreferrer">
               <Image 
                 src="/assets/line.svg.png"
                 alt="line"

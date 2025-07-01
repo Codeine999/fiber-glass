@@ -8,8 +8,8 @@ export function generateStaticParams() {
 }
 
 export default async function BlogPage({ params }) {
-    const { slug } = await params;
-  const data = blogs.find((item) => item.id === slug);
+  const { slug } = await params;
+  const data = blogs.filter((item) => item.id === slug);
   if (!data) return <div>ไม่พบข้อมูลอัลบั้มนี้</div>;
 
   return <Client data={data} />;

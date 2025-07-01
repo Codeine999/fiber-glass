@@ -7,7 +7,7 @@ export function generateStaticParams() {
   return album.map((item) => ({ slug: item.id }));
 }
 
-export default function AlbumPage({ params }) {
+export default async function AlbumPage({ params }) {
     const { slug } = params;
   const data = album.find((item) => item.id === slug);
   if (!data) return <div>ไม่พบข้อมูลอัลบั้มนี้</div>;
